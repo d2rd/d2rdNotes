@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+
 import logo from './D2rdroid2.png';
 import './App.css';
 
@@ -12,11 +14,18 @@ class App extends Component {
         </header>
                 {/* Navigation controls go here */}
         <div className="Nav-panel">
-        {/* <h2>LAMBDA NOTES</h2> */}
+          <div><button class="btn-NavButton">View Your Notes</button></div>
+          <div><button class="btn-NavButton">+ Create New Note</button></div>
+        </div>
+        {/* Notes lists and all other view elements go below here */}
+        <div className="Notes-panel">
+          <div className="View-header">
+                  <h1>Your Notes</h1>
+                  {/* <h1>Your Notes {this.props.pageHeader}</h1> */}
+          </div>
 
-<div><button class="btn-NavButton">View Your Notes</button></div>
-<div><button class="btn-NavButton">+ Create New Note</button></div>
-</div>
+        </div>
+
         
       </div>
     );
