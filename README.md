@@ -1,5 +1,5 @@
 # Lambda-Notes
-Notes Apps for CSPT1 Front-End-Project-Week at Lambda School 
+Notes App for CSPT1 Front-End-Project-Week at Lambda School 
 
 
 # Front End Project Week
