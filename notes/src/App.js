@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-
-
 import logo from './D2rdroid2.png';
 import './App.css';
 
@@ -31,8 +29,7 @@ class App extends Component {
                       <h3>Note #0 Title {this.props.title}</h3>
                   </div>
                   <div className="Note-body">This is the note body.</div>
-                  </div>
-                  
+                  </div>                 
                 </li>
               </ul>
             </div>
