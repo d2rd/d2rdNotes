@@ -14,8 +14,8 @@ class App extends Component {
         </header>
                 {/* Navigation controls go here */}
         <div className="Nav-panel">
-          <div><button class="btn-NavButton">View Your Notes</button></div>
-          <div><button class="btn-NavButton">+ Create New Note</button></div>
+          <div><button className="btn-NavButton">View Your Notes</button></div>
+          <div><button className="btn-NavButton">+ Create New Note</button></div>
         </div>
 {/* Notes lists and all other view elements go below here */}
   {/* Default display is 'Notes' which lists all notes */}

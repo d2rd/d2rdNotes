@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { fetchNotes } from './noteActions'
+import { connect } from 'react-redux';
 
-export default class Animals extends Component {
+class Notes extends Component {  //not exporting entire component see 'connect' below
   constructor(props){
     super(props)
   }
@@ -20,4 +22,9 @@ export default class Animals extends Component {
   }
 }
 
-
+const mapStateToProps = state => {
+  return {
+    notes: state
+  }
+}
+export default connect(mapStateToProps, {})(Notes) // only exporting connected part of component

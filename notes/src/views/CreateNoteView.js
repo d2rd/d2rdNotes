@@ -17,7 +17,7 @@ export default class CreateNoteView extends Component {
           </div>
           <div>
             <input className="InputBody"  type="text" placeholder="Enter note details"></input>
-            <button class="btn-NavButton">Save note</button>
+            <button className="btn-NavButton">Save note</button>
           </div>
          </form>
     </div>

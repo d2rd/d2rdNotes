@@ -1,8 +1,38 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from 'react';
+// import ReactDOM from 'react-dom';
 
-class EditNoteView extends React.Component {
+export default class CreateNoteView extends Component {
+  constructor(props){
+    super(props)
+  }
   render() {
-    return <h1>I'm EditNoteView{this.props.title}</h1>;
+    return (
+      <div>
+        <div className="View-header">
+          <h1>Edit Note</h1>
+        </div>
+    {/* 
+Add edit button as footer to note or to left of title?
+--OR--
+Double click to edit?
+
+--OR--
+
+Helper: getNoteByID
+    fetch note (needs axios?)
+    edit button
+    */}
+        <form>
+          <div>
+            <input className="InputTitle" type="text" placeholder="Enter note title"></input>
+          </div>
+          <div>
+            <input className="InputBody"  type="text" placeholder="Enter note details"></input>
+            <button className="btn-NavButton">Save changes</button>
+            <button className="btn-NavButton">Cancel</button>
+          </div>
+         </form>
+    </div>
+    )
   }
 }
