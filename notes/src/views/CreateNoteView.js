@@ -13,12 +13,13 @@ export default class CreateNoteView extends Component {
         </div>
         <form>
           <div>
-            <input type="text" placeholder="Enter note title"></input>
+            <input className="InputTitle" type="text" placeholder="Enter note title"></input>
           </div>
           <div>
-            <input type="text" placeholder="Enter note details"></input>
+            <input className="InputBody"  type="text" placeholder="Enter note details"></input>
+            <button class="btn-NavButton">Save note</button>
           </div>
-        </form>
+         </form>
     </div>
     )
   }
