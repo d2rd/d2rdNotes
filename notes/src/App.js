@@ -23,7 +23,19 @@ class App extends Component {
                   <h1>Your Notes</h1>
                   {/* <h1>Your Notes {this.props.pageHeader}</h1> */}
           </div>
-
+          <div>
+              <ul>
+                <li className="Note-row">
+                  <div className="NoteItem">
+                  <div className="Note-header">
+                      <h3>Note #0 Title {this.props.title}</h3>
+                  </div>
+                  <div className="Note-body">This is the note body.</div>
+                  </div>
+                  
+                </li>
+              </ul>
+            </div>
         </div>
 
         
