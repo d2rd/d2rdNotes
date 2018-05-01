@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './D2rdroid2.png';
 import './App.css';
 
 class App extends Component {
@@ -8,11 +8,16 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Proximo Notes</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+                {/* Navigation controls go here */}
+        <div className="Nav-panel">
+        {/* <h2>LAMBDA NOTES</h2> */}
+
+<div><button class="btn-NavButton">View Your Notes</button></div>
+<div><button class="btn-NavButton">+ Create New Note</button></div>
+</div>
+        
       </div>
     );
   }
