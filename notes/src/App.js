@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './D2rdroid2.png';
 import './App.css';
+import Notes from './components/Notes';
+import CreateNoteView from './views/CreateNoteView';
 
 class App extends Component {
   render() {
@@ -15,13 +17,18 @@ class App extends Component {
           <div><button class="btn-NavButton">View Your Notes</button></div>
           <div><button class="btn-NavButton">+ Create New Note</button></div>
         </div>
-        {/* Notes lists and all other view elements go below here */}
+{/* Notes lists and all other view elements go below here */}
+  {/* Default display is 'Notes' which lists all notes */}
         <div className="Notes-panel">
-          <div className="View-header">
-                  <h1>Your Notes</h1>
-                  {/* <h1>Your Notes {this.props.pageHeader}</h1> */}
-          </div>
           <div>
+            <Notes />
+          </div>
+   {/* when button `createNewNote` is clicked display CreateNoteView */}
+          <div>
+            <CreateNoteView />
+          </div>
+
+          {/* <div>
               <ul>
                 <li className="Note-row">
                   <div className="NoteItem">
@@ -32,10 +39,8 @@ class App extends Component {
                   </div>                 
                 </li>
               </ul>
-            </div>
+            </div> */}
         </div>
-
-        
       </div>
     );
   }
