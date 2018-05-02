@@ -6,6 +6,9 @@ class Notes extends Component {  //not exporting entire component see 'connect' 
   constructor(props){
     super(props)
   }
+  componentDidMount(){
+    this.props.fetchNotes()
+  }
   render() {
     return (
       <div>
@@ -16,6 +19,16 @@ class Notes extends Component {  //not exporting entire component see 'connect' 
         <div className="View-header">
                     <h1>Your Notes</h1>
                     {/* <h1>Your Notes {this.props.pageHeader}</h1> */}
+                    
+        </div>
+        <div>
+          <ul>
+            <li>
+              {this.props.notes.map( notes => {
+                      return <div>{ notes }</div>
+                    })}
+            </li>
+          </ul>
         </div>
       </div>
     )
@@ -27,4 +40,4 @@ const mapStateToProps = state => {
     notes: state
   }
 }
-export default connect(mapStateToProps, {})(Notes) // only exporting connected part of component
+export default connect(mapStateToProps, { fetchNotes })(Notes) // only exporting connected part of component

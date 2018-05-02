@@ -20,11 +20,11 @@ class App extends Component {
 {/* Notes lists and all other view elements go below here */}
   {/* Default display is 'Notes' which lists all notes */}
         <div className="Notes-panel">
-          <div>
+          <div className="ModuleBorderGreen">
             <Notes />
           </div>
    {/* when button `createNewNote` is clicked display CreateNoteView */}
-          <div>
+          <div className="ModuleBorderRed">
             <CreateNoteView />
           </div>
 

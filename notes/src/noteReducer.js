@@ -1,12 +1,13 @@
 // 2a create reducer(s)
 
 const noteReducer = (notes =[], action) => {
-  switch( action.payload ){
+  switch( action.type ){
     case 'FETCH_NOTES':
       // return [...notes, ...action.payload]
-      return notes.concat(action.payload)
+      return notes.concat(action.payload);
+      default: 
+        return notes
   }
-  return notes
 }
 
 export { noteReducer };
