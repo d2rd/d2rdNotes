@@ -28,6 +28,14 @@ class Notes extends Component {  //not exporting entire component see 'connect' 
                       return <div>{ notes }</div>
                     })}
             </li>
+            <li className="Note-row">
+              <div>
+                <header className="Note-header">
+                  <h3>Header:  {this.props.notes.title}</h3>
+                </header>
+                <p className="Note-item">Body: {this.props.notes.body}</p>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
