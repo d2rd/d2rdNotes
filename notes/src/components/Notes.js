@@ -23,17 +23,17 @@ class Notes extends Component {  //not exporting entire component see 'connect' 
         </div>
         <div>
           <ul>
-            <li>
+            {/* <li>
               {this.props.notes.map( notes => {
                       return <div>{ notes }</div>
                     })}
-            </li>
+            </li> */}
             <li className="Note-row">
               <div>
                 <header className="Note-header">
-                  <h3>Header:  {this.props.notes.title}</h3>
+                  <h3> {this.props.notes.title}</h3>
                 </header>
-                <p className="Note-item">Body: {this.props.notes.body}</p>
+                <p className="Note-item"> {this.props.notes.body}</p>
               </div>
             </li>
           </ul>
