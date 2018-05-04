@@ -1,3 +1,12 @@
 # import redux-form from 'redux-form;
 # import promise from 'redux-promise';
 Import {Router, browserHistory} from 'react-router';  // navigation
+Building a Simple CRUD App with React + Redux 
+  p24 index.js
+        import { Router, browserHistory } from 'react-router';
+        import routes from './routes'
+
+        render (
+            <router history={browserHistory} routes =(routes) />,
+            document.getElementById('App')
+        );
