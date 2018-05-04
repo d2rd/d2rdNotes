@@ -1,4 +1,8 @@
-const FETCH_NOTES = 'FETCH_NOTES';
+
+
+export const FETCH_NOTES = 'FETCH_NOTES';
+export const ERROR = 'ERROR';
+export const SUCCESS = 'SUCCESS'; 
 
 //refactor to pull from server
 let note1 = {
