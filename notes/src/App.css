@@ -12,6 +12,8 @@
 }
 /* BUILD STYLES */
 .App {
+  /* display: flex;
+  flex-direction: row;  */
   text-align: center;
 }
 
@@ -54,6 +56,10 @@ body {
   height: 100% !important;
 
 }
+.PanelContainer {
+  display: inline-flex;
+  flex-direction: row;
+}
 .Nav-Panel, .Notes-Panel {
   display: inline-flex;
   flex-wrap: nowrap;
@@ -82,7 +88,7 @@ body {
   min-width: 1100px;
   max-width: 85%;
   padding: 5pt;
-  margin-left: 156px;
+  margin-left: 164px;
   /* TURN OFF BEFORE BUILD */
   /* border-style: solid; */
   border-width: 2px;

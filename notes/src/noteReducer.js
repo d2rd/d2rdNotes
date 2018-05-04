@@ -1,12 +1,12 @@
 // 2a create reducer(s)
 
-const noteReducer = (notes =[], action) => {
+const noteReducer = (state =[], action) => { //creates blank array for state, 2nd argument is action.
   switch( action.type ){
     case 'FETCH_NOTES':
-      // return [...notes, ...action.payload]
-      return notes.concat(action.payload);
+      // return [...state, ...action.payload]
+      return state.concat(action.payload);
       default: 
-        return notes
+        return state
   }
 }
 

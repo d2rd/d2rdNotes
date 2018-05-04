@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import { fetchNotes } from './noteActions'
+import { fetchNotes } from './noteActions';
 import { connect } from 'react-redux';
 
-class Notes extends Component {  //not exporting entire component see 'connect' below
-  constructor(props){
-    super(props)
-  }
-  componentDidMount(){
-    this.props.fetchNotes()
+class Notes extends Component {
+  //not exporting entire component see 'connect' below
+  // // constructor(props){
+  // //   super(props)
+  // }
+  componentDidMount() {
+    // lifecycle method only available in class component
+    this.props.fetchNotes();
   }
   render() {
     return (
@@ -17,9 +19,8 @@ class Notes extends Component {  //not exporting entire component see 'connect' 
         </ul> */}
 
         <div className="View-header">
-                    <h1>Your Notes</h1>
-                    {/* <h1>Your Notes {this.props.pageHeader}</h1> */}
-                    
+          <h1>Your Notes</h1>
+          {/* <h1>Your Notes {this.props.pageHeader}</h1> */}
         </div>
         <div>
           <ul>
@@ -29,23 +30,28 @@ class Notes extends Component {  //not exporting entire component see 'connect' 
                     })}
             </li> */}
             <li className="Note-row">
-              <div>
-                <header className="Note-header">
-                  <h3> {this.props.notes.title}</h3>
-                </header>
-                <p className="Note-item"> {this.props.notes.body}</p>
-              </div>
+              {this.props.notes.map((note, i) => {
+                return (
+                  <div key = {i}>
+                    <header className="Note-header">
+                      <h3> {note.title}</h3>
+                    </header>
+                    <p className="Note-item"> {note.body}</p>
+                  </div>
+                );
+              })}
             </li>
           </ul>
         </div>
       </div>
-    )
+    );
   }
 }
 
 const mapStateToProps = state => {
+  console.log(state);
   return {
-    notes: state
-  }
-}
-export default connect(mapStateToProps, { fetchNotes })(Notes) // only exporting connected part of component
+    notes: state,
+  };
+};
+export default connect(mapStateToProps, { fetchNotes })(Notes); // only exporting connected part of component
