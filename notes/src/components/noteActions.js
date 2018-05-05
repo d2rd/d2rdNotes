@@ -1,6 +1,7 @@
 
 
 export const FETCH_NOTES = 'FETCH_NOTES';
+export const FETCHING = 'FETCHING';
 export const ERROR = 'ERROR';
 export const SUCCESS = 'SUCCESS'; 
 
@@ -35,4 +36,26 @@ const fetchNotes = () => {
   }
 }
 
-export { fetchNotes }
+const fetching = () => {
+  return {  //action object
+    type: FETCHING,
+    payload: "Fetching Notes"
+  }
+}
+
+const success = () => {
+  return {  //action object
+    type: SUCCESS,
+    payload: notes
+  }
+}
+
+const error = () => {
+  return {  //action object
+    type: ERROR,
+    payload: "Error fetching notes"
+  }
+}
+
+
+export { fetchNotes, fetching, success, error}

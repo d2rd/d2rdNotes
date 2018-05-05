@@ -1,4 +1,4 @@
-import { FETCHING, ERROR, SUCCESS } from './noteActions';
+import { FETCHING, ERROR, SUCCESS } from './components/noteActions';
 
 const defaultState = {fetching: false, error: '', notes: []}
 
@@ -11,14 +11,12 @@ const noteReducer = (state =[], action) => { //creates blank array for state, 2n
       
     case 'SUCCESS': // SUCCESS
       return state.concat(action.payload);
-
+      
     case 'ERROR':  // ERROR
       return state.error (action.payload);
       
-      default: 
-        return state
-
-    
+    default: 
+      return state
   }
 }
 
