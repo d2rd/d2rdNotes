@@ -14,21 +14,11 @@ class Notes extends Component {
   render() {
     return (
       <div>
-        {/* <ul>
-          <li><h3>Notes:</h3></li>
-        </ul> */}
-
         <div className="View-header">
           <h1>Your Notes</h1>
-          {/* <h1>Your Notes {this.props.pageHeader}</h1> */}
         </div>
         <div>
           <ul>
-            {/* <li>
-              {this.props.notes.map( notes => {
-                      return <div>{ notes }</div>
-                    })}
-            </li> */}
             <li className="Note-row">
               {this.props.notes.map((note, i) => {
                 return (
