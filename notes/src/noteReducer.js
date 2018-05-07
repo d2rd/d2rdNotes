@@ -8,11 +8,11 @@ import { FETCH_NOTES_START, FETCH_NOTES, FETCHING, ERROR, SUCCESS } from './comp
 
 const defaultState = {fetching: false, error: '', notes: []}
 
-// 2a create reducer(s)
+// 2a create reducer(s) with case statements on how to handle each type of action:
 const noteReducer = (state =[], action) => { //creates blank array for state, 2nd argument is action.
   switch( action.type ){
     case "FETCH_NOTES_START": {
-      return {...state, fetching: true}
+      return {...state, fetching: true, error: false}
       // break;
     }
     case 'FETCH_NOTES': {

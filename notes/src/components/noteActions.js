@@ -1,9 +1,10 @@
 
-
-export const FETCH_NOTES = 'FETCH_NOTES';
-export const FETCHING = 'FETCHING';
-export const ERROR = 'ERROR';
-export const SUCCESS = 'SUCCESS'; 
+//export the constants we plan on using for each action:
+    export const FETCH_NOTES_START = 'FETCH_NOTES_START';
+    export const FETCH_NOTES = 'FETCH_NOTES';
+    export const FETCHING = 'FETCHING';
+    export const SUCCESS = 'SUCCESS'; 
+    export const ERROR = 'ERROR';
 
 //refactor to pull from server
 let note1 = {
@@ -29,6 +30,12 @@ let note5 = {
 const notes = [note1, note2, note3, note4, note5];
 
 //action creator is 9-15
+const fetchNotesStart = () => {
+  return {  //action object
+    type: FETCH_NOTES_START,
+    text: "Fetching Notes..."
+  }
+}
 const fetchNotes = () => {
   return {  //action object
     type: FETCH_NOTES,
@@ -58,4 +65,4 @@ const error = () => {
 }
 
 
-export { fetchNotes, fetching, success, error}
+export { fetchNotesStart, fetchNotes, fetching, success, error}

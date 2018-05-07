@@ -1,7 +1,7 @@
 import React from 'react';
 // import ReactDOM from 'react-dom';
 
-const CreateNoteView = props => {
+const CreateNoteView = (props => {
   // constructor(props){
   //   super(props)
   // }{
@@ -29,6 +29,6 @@ const CreateNoteView = props => {
       </form>
     </div>
   );
-};
+});
 
 export default CreateNoteView;

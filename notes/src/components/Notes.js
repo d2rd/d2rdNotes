@@ -38,10 +38,10 @@ class Notes extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state => {
   console.log(state);
   return {
     notes: state,
   };
-};
+});
 export default connect(mapStateToProps, { fetchNotes })(Notes); // only exporting connected part of component

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NavPanel = props => {
+const NavPanel = (props => {
   return (
     <div className="Nav-panel">
       <div>
@@ -11,6 +11,6 @@ const NavPanel = props => {
       </div>
     </div>
   );
-};
+});
 
 export default NavPanel;
