@@ -11,8 +11,11 @@ import { createStore } from 'redux';
 //3a import Provider
 import { Provider } from 'react-redux';  // allows store to be state for entire React app
 
-// 1b) create store
-const store = createStore(noteReducer);  //2c add reducer as argument for createStore
+// 1b) create store (//2c also add reducer 'noteReducer' as argument for createStore)
+const store = createStore(noteReducer);
+store.subscribe(() => {
+  console.log('Updated Store', store.getState());
+})  
 
 
 //3b wrap 'App' in Provider and specify store
