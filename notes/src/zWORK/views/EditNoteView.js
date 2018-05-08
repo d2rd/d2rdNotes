@@ -27,7 +27,7 @@ Helper: getNoteByID
             <input className="InputTitle" type="text" placeholder="Enter note title"></input>
           </div>
           <div>
-            <input className="InputBody"  type="text" placeholder="Enter note details"></input>
+            <input className="InputBody"  type="text" placeholder="Enter note content"></input>
             <button className="btn-NavButton">Save changes</button>
             <button className="btn-NavButton">Cancel</button>
           </div>
