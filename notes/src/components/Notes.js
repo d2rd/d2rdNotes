@@ -22,6 +22,10 @@ class Notes extends Component {
   render() {
     return (
       <div className="Note-Container">
+      <div className="View-header">
+        <h1>Your Notes</h1>
+        <h1>Your Notes {this.props.pageHeader}</h1>
+     </div>
         <ul className="Note-List">
           {this.props.notes.map(note => {
             return (
