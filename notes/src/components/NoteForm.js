@@ -25,7 +25,7 @@ class NoteForm extends Component {
         <input
           className="input"
           value={this.state.name}
-          name="name"
+          name="title"
           type="text"
           placeholder="Title"
           onChange={this.handleInputChange}
@@ -47,7 +47,7 @@ class NoteForm extends Component {
           onChange={this.handleInputChange}
         />
         <button onClick={() => this.handleAddNote()} type="button">
-          Add New Note
+          Save New Note
         </button>
       </form>
     );
