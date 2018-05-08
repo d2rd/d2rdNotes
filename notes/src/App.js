@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './D2rdroid2.png';
 import './App.css';
-// import Notes from './components/Notes';
+import Notes from './components/Notes';
 import NotesPanel from './components/NotesPanel';
 import NavPanel from './components/NavPanel';
 import CreateNoteView from './views/CreateNoteView';
