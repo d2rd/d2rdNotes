@@ -24,14 +24,13 @@ class Notes extends Component {
       <div className="Note-Container">
       <div className="View-header">
         <h1>Your Notes</h1>
-        <h1>Your Notes {this.props.pageHeader}</h1>
      </div>
-        <ul className="Note-List">
+        <ul className="Note-row">
           {this.props.notes.map(note => {
             return (
-              <li onClick={() => this.handleShowNote(note)} key={note.id}>
+              <div className="Note-header"onClick={() => this.handleShowNote(note)} key={note.id}>
                 {note.title}
-              </li>
+              </div>
             );
           })}
         </ul>
@@ -81,7 +80,6 @@ export default connect(mapStateToProps, {
 
 //     <div className="View-header">
 //       <h1>Your Notes</h1>
-//       {/* <h1>Your Notes {this.props.pageHeader}</h1> */}
 //     </div>
 //     <div>
 //       <ul>
