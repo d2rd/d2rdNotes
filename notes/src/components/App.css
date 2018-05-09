@@ -154,7 +154,7 @@ body {
 }
 .Note-header-showNote {
   background-color: rgb(14, 124, 158);
-  height: 20pt;
+  height: 24pt;
   width: 43%;
   margin: 0px 10px 0px 30%;
   padding: 10pt;
@@ -175,7 +175,7 @@ body {
   color: black;
   text-align: justify;
 }
-.btn-showNote {
+.btn-showNote-update {
   display: flex;
   direction: row;
   justify-content: center;
@@ -184,7 +184,7 @@ body {
   align-items: center;
   
   padding: 2px;
-  width: 43%;
+  width: 46%;
   height: 15%;
   margin: 0px 10px 0px 30%;
   padding: 10pt;
@@ -209,6 +209,42 @@ body {
   font-weight: bold;
   font-size: 14pt;
 }
+
+.btn-showNote-delete {
+  display: flex;
+  direction: row;
+  justify-content: center;
+  align-content: center;
+  vertical-align: middle;
+  align-items: center;
+  
+  padding: 2px;
+  width: 46%;
+  height: 15%;
+  margin: 0px 10px 0px 30%;
+  padding: 10pt;
+  /*margin-top: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;*/
+  line-height: 30px;
+  
+  /*border: solid 1.5px #888f91;*/
+  /*border-radius: 5%;*/
+  /*border-top-left-radius: 30%;
+  border-top-right-radius: 30%;
+  border-bottom-right-radius:  30%;
+  border-bottom-left-radius:  30%;*/
+  box-shadow: 20%;
+
+
+  background-color: rgb(126, 82, 82);
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 14pt;
+}
+
 .Input {
   width: 100%;
   padding: 10px;

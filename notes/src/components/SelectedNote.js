@@ -8,10 +8,10 @@ export default function SelectedNote(props) {
       <div className="Note-header-showNote">{props.selected.title}</div>
       <div className="Note-body-showNote">{props.selected.body}</div>
       <div>{props.selected.priority}</div>
-      <button className="btn-showNote"  onClick={() => props.toggleShowUpdate()}>{`Update ${
+      <button className="btn-showNote-update"  onClick={() => props.toggleShowUpdate()}>{`Update ${
         props.selected.title
       }`}</button>
-      <button className="btn-showNote" onClick={() => props.handleDeleteNote()}>{`Delete ${
+      <button className="btn-showNote-delete" onClick={() => props.handleDeleteNote()}>{`Delete ${
         props.selected.title
       }`}</button>
     </div>
