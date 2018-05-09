@@ -30,7 +30,10 @@ class Notes extends Component {
             return (
               <div className="Note-header"onClick={() => this.handleShowNote(note)} key={note.id}>
                 {note.title}
-              </div>
+              </div>  // shows note contents on click
+            //   <div className="Note-header"onClick={() => this.handleShowNote(note)} key={note.id}>
+            //   {note.title}
+            // </div>
             );
           })}
         </ul>
