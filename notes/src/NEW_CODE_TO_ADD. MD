@@ -1,3 +1,19 @@
+# TRUNCATE STRING  https://stackoverflow.com/questions/5454235/shorten-string-without-cutting-words-in-javascript
+
+    Lodash has a function specifically written for this: _.truncate
+
+        const truncate = _.truncate
+        const str = 'The quick brown fox jumps over the lazy dog'
+
+        truncate(str, {
+        length: 30, // maximum 30 characters
+        separator: /,?\.* +/ // separate by spaces, including preceding commas and periods
+        })
+
+        // 'The quick brown fox jumps...'
+
+
+
 # import redux-form from 'redux-form;
 # import promise from 'redux-promise';
 Import {Router, browserHistory} from 'react-router';  // navigation

@@ -131,16 +131,30 @@ body {
 
 .Note-header {
   background-color: rgb(14, 124, 158);
-  height: 40px;
+  height: 60px;
   width: 250px;
-  margin: 2px 2px 2px;
+  margin: 2px 02px 2px;
   padding: 10px 0px 0px 0px;
   font-family: sans-serif;
   font-size: 13pt;
+  /* font-style: oblique; */
   color: white;
   text-align: center;
+
 }
 
+.Note-summary {
+  background-color: rgb(70, 175, 207);
+  height: 160px;
+  width: 250px;
+  margin: 5px 0px 5px;
+  padding: 10px 0px 10px 0px;
+  font-family: sans-serif;
+  font-size: 13pt;
+  color: white;
+  text-align: justify;
+  text-overflow: ellipsis;
+}
 .Note-body {
   background-color: rgba(81, 187, 236, 0.329);
   height: 90%;
@@ -151,6 +165,7 @@ body {
   font-size: 11pt;
   color: black;
   text-align: justify;
+  text-overflow: scroll;
 }
 .Note-header-showNote {
   background-color: rgb(14, 124, 158);

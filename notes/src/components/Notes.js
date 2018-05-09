@@ -42,9 +42,8 @@ class Notes extends Component {
                 {this.props.notes.map(note => {
                   return (
                     <div className="Note-header"onClick={() => this.handleShowNote(note)} key={note.id}>
-                    <div>
-                      {note.title}
-                      {note.summary}
+                      <h4>{note.title}</h4>
+                    <div className="Note-summary">{note.summary}
                     </div>
                 </div>  // shows note contents on click
                   //   <div className="Note-header"onClick={() => this.handleShowNote(note)} key={note.id}>
