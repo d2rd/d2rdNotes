@@ -22,21 +22,39 @@ class Notes extends Component {
   render() {
     return (
       <div className="Note-Container">
-      <div className="View-header">
-        <h1>Your Notes</h1>
-     </div>
-        <ul className="Note-row">
-          {this.props.notes.map(note => {
-            return (
-              <div className="Note-header"onClick={() => this.handleShowNote(note)} key={note.id}>
-                {note.title}
-              </div>  // shows note contents on click
-            //   <div className="Note-header"onClick={() => this.handleShowNote(note)} key={note.id}>
-            //   {note.title}
-            // </div>
-            );
-          })}
-        </ul>
+        <div className="View-header">
+          <h1>Your Notes</h1>
+        </div>
+        <div className="PanelContainer">
+          <div className="Nav-panel">
+            <div>
+              <button className="btn-NavButton">View Your Notes</button>
+            </div>
+            <div>
+              <button className="btn-NavButton">Search Notes</button>
+            </div>
+            <div>
+              <button className="btn-NavButton">+ Create New Note</button>
+            </div>
+          </div>
+          <div className="Notes-panel">
+              <ul className="Note-row">
+                {this.props.notes.map(note => {
+                  return (
+                    <div className="Note-header"onClick={() => this.handleShowNote(note)} key={note.id}>
+                    <div>
+                      {note.title}
+                      {note.summary}
+                    </div>
+                </div>  // shows note contents on click
+                  //   <div className="Note-header"onClick={() => this.handleShowNote(note)} key={note.id}>
+                  //   {note.title}
+                  // </div>
+                );
+              })}
+              </ul>
+          </div>
+        </div>
         {Object.keys(this.props.noteSelected).length > 0 ? (
           <SelectedNote
             handleShowNote={this.handleShowNote}

@@ -131,10 +131,10 @@ body {
 
 .Note-header {
   background-color: rgb(14, 124, 158);
-  height: 20pt;
+  height: 40px;
   width: 250px;
   margin: 2px 2px 2px;
-  padding: 0px 0px 0px 0px;
+  padding: 10px 0px 0px 0px;
   font-family: sans-serif;
   font-size: 13pt;
   color: white;
