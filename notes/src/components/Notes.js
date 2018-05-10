@@ -59,17 +59,14 @@ class Notes extends Component {
               <ul className="Note-row">
                 {!this.props.noteSelected.id &&  this.props.notes.map(note => {
                   return (
-                    <div className="Note-header"onClick={() => this.handleShowNote(note)} key={note.id}>
+                    <div className="Note-header" onClick={() => this.handleShowNote(note)} key={note.id}>
                       <h4>{note.title}</h4>
                     <div className="Note-summary">
-                      {this.makeNoteSummary4 = () => {
-                        {note.summary}
-                      }}
-
+                      {note.summary}
                     </div>  
                     {/* make function to create summary on rendering notes list */}
                 </div>  // shows note contents on click
-                );
+                  );
                 })}
               </ul>
           </div>
