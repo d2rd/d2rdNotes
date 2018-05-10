@@ -16,8 +16,8 @@ class NoteForm extends Component {
 
   handleAddNote = _ => {
     const { title, priority, body, urlAddress } = this.state;
-    this.props.createNote({ title, priority, body, urlAddress });
-    this.setState({ title: '', priority: '', body: '', urlAddress: `` });
+    this.props.createNote({ title, priority,  body, urlAddress });
+    this.setState({ title: '', priority: '',  body: '', urlAddress: `` });
   };
 
   render() {

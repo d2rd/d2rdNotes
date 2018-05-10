@@ -37,6 +37,10 @@ export const notesReducer = (state = initialState, action) => {
         updatingNote: false,
         error: action.payload
       };
+    case actionTypes.UPDATE_TARGET:
+        return {
+          ...state, notes: action.payload
+        }
     default:
       return state;
   }

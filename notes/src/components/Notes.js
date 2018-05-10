@@ -3,7 +3,7 @@ import './App.css';
 import logo from './D2rdroid2.png';
 import SelectedNote from './SelectedNote';
 import { connect } from 'react-redux';
-import { deleteNote, updateSingleNote, toggleShowUpdate } from '../actions';
+import { deleteNote, updateSingleNote, toggleShowUpdate, showSelectedNote } from '../actions';
 import UpdateNoteForm from './UpdateNoteForm';
 
 class Notes extends Component {
@@ -13,28 +13,8 @@ class Notes extends Component {
   };
 
   handleShowNote = note => {
-    this.props.updateSingleNote(note);
+    this.props.showSelectedNote(note);
   };
-
-  // makeNoteSummary = note => {
-  //   let str = this.props.body;
-  //   let summaryString = str.substr(0, 50);
-  //   console.log(summaryString);
-  // };
-
-  // makeNoteSummary2 = () => {
-  //   this.makeNoteSummary(this.props.body)
-  // };
-
-  // makeNoteSummary3 = () => {
-  //   this.props.body.substring(0, 50)
-  //   console.log(makeNoteSummary3);
-  // };
-
-  makeNoteSummary4 = note => {
-    return note.summary = this.props.body.substring(0, 50);
-    console.log(note.summary);
-    }
 
 
   toggleShowUpdate = () => {
@@ -62,10 +42,10 @@ class Notes extends Component {
               <ul className="Note-row">
                 {!this.props.noteSelected.id &&  this.props.notes.map(note => {
                   return (
-                    <div className="Note-header" onClick={() => this.handleShowNote(note)} key={note.id}>
+                    <div className="Note-header" onClick={() => this.props.showSelectedNote(note)} key={note.id}>
                       <h4>{note.title}</h4>
                     <div className="Note-summary">
-                      {note.summary}
+                      {note.body.slice(0,100)+"..."}
                     </div>  
                     {/* make function to create summary on rendering notes list */}
                 </div>  // shows note contents on click
@@ -77,7 +57,6 @@ class Notes extends Component {
         {Object.keys(this.props.noteSelected).length > 0 ? (
           <SelectedNote
             handleShowNote={this.handleShowNote}
-            // makeNoteSummary={this.makeNoteSummary2} //should not be on noteSelected
             toggleShowUpdate={this.toggleShowUpdate}
             handleDeleteNote={this.handleDeleteNote}
             selected={this.props.noteSelected}
@@ -106,7 +85,8 @@ const mapStateToProps = state => {
 export default connect(mapStateToProps, {
   deleteNote,
   updateSingleNote,
-  toggleShowUpdate
+  toggleShowUpdate,
+  showSelectedNote
 })(Notes);
 
 

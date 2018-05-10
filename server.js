@@ -74,11 +74,11 @@ app.post('/api/notes/create', (req, res) => {
   res.send(notes);
 });
 
-app.put('/api/notes/update', (req, res) => {
+app.put('/api/notes/update/:id', (req, res) => {
   const { title, priority,summary, body } = req.body;
   const updatedNote = { title, priority, summary, body };
   const newNotes = notes.map(note => {
-    return (note = updatedNote);
+    return (note.id == req.params.id ? updatedNote :note);
   });
   notes = newNotes;
   res.send(notes);

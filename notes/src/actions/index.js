@@ -11,19 +11,28 @@ export const UPDATING_NOTE = 'UPDATING_NOTE';
 export const DELETING_NOTE = 'DELETING_NOTE';
 export const SINGLE_NOTE = 'SINGLE_NOTE';
 export const TOGGLE_UPDATE_NOTE = 'TOGGLE_UPDATE_NOTE';
+export const UPDATE_TARGET = 'UPDATE_TARGET';
 
 const URL = 'http://localhost:5500/api/notes';
 
 export const getNotes = () => {
   const notes = axios.get(`${URL}/get`);
   return dispatch => {
-    dispatch({ type: GETTING_NOTES });
+    dispatch({
+      type: GETTING_NOTES
+    });
     notes
       .then(response => {
-        dispatch({ type: GET_NOTES, payload: response.data });
+        dispatch({
+          type: GET_NOTES,
+          payload: response.data
+        });
       })
       .catch(err => {
-        dispatch({ type: ERROR, payload: err });
+        dispatch({
+          type: ERROR,
+          payload: err
+        });
       });
   };
 };
@@ -31,30 +40,55 @@ export const getNotes = () => {
 export const createNote = note => {
   const newNote = axios.post(`${URL}/create`, note);
   return dispatch => {
-    dispatch({ type: CREATING_NOTE });
+    dispatch({
+      type: CREATING_NOTE
+    });
     newNote
-      .then(({ data }) => {
-        dispatch({ type: CREATE_NOTE, payload: data });
+      .then(({
+        data
+      }) => {
+        dispatch({
+          type: CREATE_NOTE,
+          payload: data
+        });
       })
       .catch(err => {
-        dispatch({ type: ERROR, payload: err });
+        dispatch({
+          type: ERROR,
+          payload: err
+        });
       });
   };
 };
 
 export const deleteNote = id => {
   const deletedNote = axios.delete(`${URL}/delete`, {
-    data: { id }
+    data: {
+      id
+    }
   });
   return dispatch => {
-    dispatch({ type: DELETING_NOTE });
+    dispatch({
+      type: DELETING_NOTE
+    });
     deletedNote
-      .then(({ data }) => {
-        dispatch({ type: DELETE_NOTE, payload: data });
-        dispatch({ type: SINGLE_NOTE, payload: {} });
+      .then(({
+        data
+      }) => {
+        dispatch({
+          type: DELETE_NOTE,
+          payload: data
+        });
+        dispatch({
+          type: SINGLE_NOTE,
+          payload: {}
+        });
       })
       .catch(err => {
-        dispatch({ type: ERROR, payload: err });
+        dispatch({
+          type: ERROR,
+          payload: err
+        });
       });
   };
 };
@@ -65,9 +99,25 @@ export const toggleShowUpdate = () => {
   };
 };
 
-export const updateSingleNote = note => {
+export const updateSingleNote = (note, id) => {
+  return dispatch => {
+    axios.put(URL + "/" + id, note)
+      .then(response => {
+        console.log(response)
+        dispatch({
+            type: UPDATE_TARGET,
+            payload: response.data
+          })
+          .catch(err => console.log(err.message))
+
+      })
+  };
+};
+
+export const showSelectedNote = (note) => {
   return {
     type: SINGLE_NOTE,
     payload: note
-  };
-};
+
+  }
+}
