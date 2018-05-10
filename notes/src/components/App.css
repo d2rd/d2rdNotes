@@ -59,6 +59,7 @@ body {
 .PanelContainer {
   display: inline-flex;
   flex-direction: row;
+  /* align-items: space-between; */
 }
 .Nav-Panel, .Notes-Panel {
   display: inline-flex;
@@ -72,9 +73,10 @@ body {
 
 .Nav-panel {
   width: 15%;
-  min-width: 150px;
+  min-width: 10%;
   max-width: 150px;
-  padding: 5pt;
+  /* margin-left: 0px; */
+  padding: 2pt;
   background-color: darkgrey;
 
   /* TURN OFF BEFORE BUILD */
@@ -85,10 +87,11 @@ body {
 
 .Notes-panel {
   /* FFC */
-  min-width: 1100px;
-  max-width: 85%;
+  min-width: 70%  ;
+  max-width: 90%;
+  height: 90%;
   padding: 5pt;
-  margin-left: 164px;
+  /* margin-left: 1%; */
   /* TURN OFF BEFORE BUILD */
   /* border-style: solid; */
   border-width: 2px;
@@ -109,7 +112,7 @@ body {
 
 .Note-row {
   display: inline-flex;
-  justify-content: flex-start;
+  justify-content: space-between;
 	margin: 10px;
 	/* border: 1px solid #eee;
 	box-shadow: 0 2px 2px #ccc; */
@@ -133,8 +136,8 @@ body {
   background-color: rgb(14, 124, 158);
   height: 60px;
   width: 250px;
-  margin: 2px 02px 2px;
-  padding: 10px 0px 0px 0px;
+  margin: 2px 2px 2px;
+  padding: 5px 2px;
   font-family: sans-serif;
   font-size: 13pt;
   /* font-style: oblique; */
@@ -146,9 +149,9 @@ body {
 .Note-summary {
   background-color: rgb(70, 175, 207);
   height: 160px;
-  width: 250px;
-  margin: 5px 0px 5px;
-  padding: 10px 0px 10px 0px;
+  width: 230px;
+  margin: 10px 0px 5px;
+  padding: 10px 10px 10px 10px;
   font-family: sans-serif;
   font-size: 13pt;
   color: white;

@@ -12,7 +12,10 @@
 
         // 'The quick brown fox jumps...'
 
-
+# Hiding the summary block element
+* https://eddyerburgh.me/toggle-visibility-with-react
+* https://stackoverflow.com/questions/41819342/how-to-hide-and-show-a-div-in-react
+* https://stackoverflow.com/questions/41247496/jsx-if-else-shorthand-to-hide-element
 
 # import redux-form from 'redux-form;
 # import promise from 'redux-promise';

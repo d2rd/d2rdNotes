@@ -6,6 +6,7 @@ const initialState = {
   updatingNote: false,
   creatingNote: false,
   deletingNote: false,
+  isHidden: false,
   error: null
 };
 

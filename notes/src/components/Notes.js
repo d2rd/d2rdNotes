@@ -39,11 +39,12 @@ class Notes extends Component {
           </div>
           <div className="Notes-panel">
               <ul className="Note-row">
-                {this.props.notes.map(note => {
+                {!this.props.noteSelected.id && this.props.notes.map(note => {
                   return (
                     <div className="Note-header"onClick={() => this.handleShowNote(note)} key={note.id}>
                       <h4>{note.title}</h4>
-                    <div className="Note-summary">{note.summary}
+                    <div className="Note-summary">
+                      {note.summary}
                     </div>
                 </div>  // shows note contents on click
                   //   <div className="Note-header"onClick={() => this.handleShowNote(note)} key={note.id}>
