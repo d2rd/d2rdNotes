@@ -135,7 +135,7 @@ body {
 .Note-header {
   background-color: rgb(14, 124, 158);
   height: 60px;
-  width: 250px;
+  width: 350px;
   margin: 2px 2px 2px;
   padding: 5px 2px;
   font-family: sans-serif;
@@ -148,10 +148,12 @@ body {
 
 .Note-summary {
   background-color: rgb(70, 175, 207);
-  height: 160px;
-  width: 230px;
-  margin: 10px 0px 5px;
-  padding: 10px 10px 10px 10px;
+  height: 100px;
+  width: 350px;
+  /* margin: 10px 0px 5px; */
+  margin: 2px 2px 2px;
+  /* padding: 10px 10px 10px 10px; */
+  padding: 5px 2px;
   font-family: sans-serif;
   font-size: 13pt;
   color: white;
@@ -262,14 +264,28 @@ body {
   font-weight: bold;
   font-size: 14pt;
 }
-
+.Column-Layout {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: space-between;
+  width: 80%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 12pt;
+}
 .Input {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: space-between;
   width: 20%;
   padding: 10px;
   box-sizing: border-box;
   font-size: 12pt;
 }
 .Input-priority {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: space-between;
   width: 5%;
   padding: 10px;
   box-sizing: border-box;
@@ -279,11 +295,15 @@ body {
   font-size: 12pt;
 }
 
-.Input-button {
+.btn-Input-save {
   width: 10%;
   padding: 10px;
   box-sizing: border-box;
   font-size: 12pt;
+  margin: 30px 0px 30px 0px;
+  color: white;
+  background-color: rgba(81, 187, 236, 0.329);
+
 }
 
 .Label {

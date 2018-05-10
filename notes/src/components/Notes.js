@@ -16,15 +16,23 @@ class Notes extends Component {
     this.props.updateSingleNote(note);
   };
 
-  makeNoteSummary = note => {
-    let str = this.props.body;
-    let summaryString = str.substr(0, 50);
-    console.log(summaryString);
-  };
+  // makeNoteSummary = note => {
+  //   let str = this.props.body;
+  //   let summaryString = str.substr(0, 50);
+  //   console.log(summaryString);
+  // };
 
-  makeNoteSummary2 = () => {
-    this.makeNoteSummary(this.props.body)
-  };
+  // makeNoteSummary2 = () => {
+  //   this.makeNoteSummary(this.props.body)
+  // };
+
+  // makeNoteSummary3 = () => {
+  //   this.props.body.substring(0, 50)
+  //   console.log(makeNoteSummary3);
+  // };
+
+  // makeNoteSummary4 = this.props.body.substring(0, 50);
+
 
   toggleShowUpdate = () => {
     this.props.toggleShowUpdate();
@@ -54,7 +62,7 @@ class Notes extends Component {
                     <div className="Note-header"onClick={() => this.handleShowNote(note)} key={note.id}>
                       <h4>{note.title}</h4>
                     <div className="Note-summary">
-                      {this.makeNoteSummary2 = () => {
+                      {this.makeNoteSummary4 = () => {
                         {note.summary}
                       }}
 
@@ -69,6 +77,7 @@ class Notes extends Component {
         {Object.keys(this.props.noteSelected).length > 0 ? (
           <SelectedNote
             handleShowNote={this.handleShowNote}
+            // makeNoteSummary={this.makeNoteSummary2} //should not be on noteSelected
             toggleShowUpdate={this.toggleShowUpdate}
             handleDeleteNote={this.handleDeleteNote}
             selected={this.props.noteSelected}

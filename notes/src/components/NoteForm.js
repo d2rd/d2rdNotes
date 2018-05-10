@@ -7,7 +7,8 @@ class NoteForm extends Component {
     title: '',
     body: '',
     // category: '', // future '{business, personal}
-    priority: '' // importance 1-5
+    priority: '',
+    urlAddress: `` // importance 1-5
   };
   handleInputChange = event => {
     this.setState({ [event.target.title]: event.target.value });
@@ -16,12 +17,12 @@ class NoteForm extends Component {
   handleAddNote = _ => {
     const { title, priority, body, urlAddress } = this.state;
     this.props.createNote({ title, priority, body, urlAddress });
-    this.setState({ title: '', priority: '', body: '' });
+    this.setState({ title: '', priority: '', body: '', urlAddress: `` });
   };
 
   render() {
     return (
-      <form className="Column-Layout">
+      <form className="column-Layout">
         <input
           className="Input"
           value={this.state.title}
@@ -48,13 +49,13 @@ class NoteForm extends Component {
         />
         <input
           className="Input"
-          value={this.state.body}
+          value={this.state.urlAddress}
           name="urlAddress"
           type="text"
           placeholder="URL"
           onChange={this.handleInputChange}
         />
-        <button className="Input-button" onClick={() => this.handleAddNote()} type="button">
+        <button className="btn-Input-save" onClick={() => this.handleAddNote()} type="button">
           Save New Note
         </button>
       </form>
