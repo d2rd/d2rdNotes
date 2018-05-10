@@ -16,6 +16,16 @@ class Notes extends Component {
     this.props.updateSingleNote(note);
   };
 
+  makeNoteSummary = note => {
+    let str = this.props.body;
+    let summaryString = str.substr(0, 50);
+    console.log(summaryString);
+  };
+
+  makeNoteSummary2 = () => {
+    this.makeNoteSummary(this.props.body)
+  };
+
   toggleShowUpdate = () => {
     this.props.toggleShowUpdate();
   };
@@ -39,17 +49,20 @@ class Notes extends Component {
           </div>
           <div className="Notes-panel">
               <ul className="Note-row">
-                {!this.props.noteSelected.id && this.props.notes.map(note => {
+                {!this.props.noteSelected.id &&  this.props.notes.map(note => {
                   return (
                     <div className="Note-header"onClick={() => this.handleShowNote(note)} key={note.id}>
                       <h4>{note.title}</h4>
                     <div className="Note-summary">
-                      {note.summary}
+                      {this.makeNoteSummary2 = () => {
+                        {note.summary}
+                      }}
+
                     </div>  
                     {/* make function to create summary on rendering notes list */}
                 </div>  // shows note contents on click
                 );
-              })}
+                })}
               </ul>
           </div>
         </div>

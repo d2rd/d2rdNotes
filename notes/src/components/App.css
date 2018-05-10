@@ -23,14 +23,14 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: rgb(14, 124, 158);
   height: 150px;
   padding: 20px;
   color: white;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 3.5em;
 }
 
 .App-intro {
@@ -264,9 +264,26 @@ body {
 }
 
 .Input {
-  width: 100%;
+  width: 20%;
   padding: 10px;
   box-sizing: border-box;
+  font-size: 12pt;
+}
+.Input-priority {
+  width: 5%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 12pt;
+}
+.Input-placeholder {
+  font-size: 12pt;
+}
+
+.Input-button {
+  width: 10%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 12pt;
 }
 
 .Label {
@@ -297,13 +314,15 @@ body {
   box-sizing: border-box;
 }
 .InputElement {
+  /* display: inline-block;
+  direction: row; */
   outline: none;
   border: 1px solid #ccc;
   background-color: white;
   font: inherit;
   padding: 6px 10px;
   display: block;
-  width: 100%;
+  width: 10%;
   box-sizing: border-box;
 }
 

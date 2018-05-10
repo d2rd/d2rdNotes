@@ -10,28 +10,28 @@ class NoteForm extends Component {
     priority: '' // importance 1-5
   };
   handleInputChange = event => {
-    this.setState({ [event.target.name]: event.target.value });
+    this.setState({ [event.target.title]: event.target.value });
   };
 
   handleAddNote = _ => {
-    const { name, priority, body } = this.state;
-    this.props.createNote({ name, priority, body });
-    this.setState({ name: '', priority: '', body: '' });
+    const { title, priority, body, urlAddress } = this.state;
+    this.props.createNote({ title, priority, body, urlAddress });
+    this.setState({ title: '', priority: '', body: '' });
   };
 
   render() {
     return (
       <form className="Column-Layout">
         <input
-          className="input"
-          value={this.state.name}
+          className="Input"
+          value={this.state.title}
           name="title"
           type="text"
           placeholder="Title"
           onChange={this.handleInputChange}
         />
         <input
-          className="input"
+          className="Input-priority"
           value={this.state.priority}
           name="priority"
           type="text"
@@ -39,14 +39,22 @@ class NoteForm extends Component {
           onChange={this.handleInputChange}
         />
         <input
-          className="input"
+          className="Input"
           value={this.state.body}
           name="body"
           type="text"
-          placeholder="Body"
+          placeholder="Content"
           onChange={this.handleInputChange}
         />
-        <button onClick={() => this.handleAddNote()} type="button">
+        <input
+          className="Input"
+          value={this.state.body}
+          name="urlAddress"
+          type="text"
+          placeholder="URL"
+          onChange={this.handleInputChange}
+        />
+        <button className="Input-button" onClick={() => this.handleAddNote()} type="button">
           Save New Note
         </button>
       </form>
