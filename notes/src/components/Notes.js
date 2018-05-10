@@ -31,7 +31,10 @@ class Notes extends Component {
   //   console.log(makeNoteSummary3);
   // };
 
-  // makeNoteSummary4 = this.props.body.substring(0, 50);
+  makeNoteSummary4 = note => {
+    return note.summary = this.props.body.substring(0, 50);
+    console.log(note.summary);
+    }
 
 
   toggleShowUpdate = () => {

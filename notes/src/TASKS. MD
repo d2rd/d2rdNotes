@@ -1,3 +1,16 @@
+# CREATE summary
+*   makeNoteSummary4 = note => {
+    return note.summary = this.props.body.substring(0, 50);
+    console.log(note.summary);
+    }
+* 
+    {/* let noteSummary = ''; */}
+    <div className="Note-summary"  key={note.id}>
+    let noteSummary = () => {this.makeSummary4(note)}
+        {note.summary}
+    </div>  // shows note contents on click
+
+
 # TRUNCATE STRING  https://stackoverflow.com/questions/5454235/shorten-string-without-cutting-words-in-javascript
 
     Lodash has a function specifically written for this: _.truncate
