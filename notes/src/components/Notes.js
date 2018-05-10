@@ -45,11 +45,9 @@ class Notes extends Component {
                       <h4>{note.title}</h4>
                     <div className="Note-summary">
                       {note.summary}
-                    </div>
+                    </div>  
+                    {/* make function to create summary on rendering notes list */}
                 </div>  // shows note contents on click
-                  //   <div className="Note-header"onClick={() => this.handleShowNote(note)} key={note.id}>
-                  //   {note.title}
-                  // </div>
                 );
               })}
               </ul>
