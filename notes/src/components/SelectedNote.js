@@ -7,9 +7,8 @@ export default function SelectedNote(props) {
       <span onClick={() => props.handleShowNote({})}> Hide </span>
       <div className="Note-header-showNote">{props.selected.title}</div>
       <div className="Note-body-showNote">{props.selected.body}
-   
       </div>
-      <div>{props.selected.priority}</div>
+      {/* <div>{props.selected.priority}</div> */}
       <button className="btn-showNote-update"  onClick={() => props.toggleShowUpdate()}>{`Update ${
         props.selected.title
       }`}</button>

@@ -303,7 +303,7 @@ body {
   font-size: 12pt;
 }
 
-.btn-Input-save {
+.btn-Input-save, .btn-Input-saveUpdate {
   width: 10%;
   padding: 10px;
   box-sizing: border-box;
@@ -311,6 +311,17 @@ body {
   margin: 30px 0px 30px 0px;
   color: white;
   background-color: rgba(81, 187, 236, 0.329);
+
+}
+
+.btn-Input-saveUpdate {
+  /* width: 10%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 12pt;
+  margin: 30px 0px 30px 0px; */
+  color:black;
+  background-color: rgba(70, 112, 131, 0.329);
 
 }
 

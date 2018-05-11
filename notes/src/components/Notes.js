@@ -54,6 +54,9 @@ class Notes extends Component {
               </ul>
           </div>
         </div>
+        {this.props.showUpdate ? (
+          <UpdateNoteForm note={this.props.noteSelected} />
+        ) : null}
         {Object.keys(this.props.noteSelected).length > 0 ? (
           <SelectedNote
             handleShowNote={this.handleShowNote}
@@ -62,9 +65,7 @@ class Notes extends Component {
             selected={this.props.noteSelected}
           />
         ) : null}
-        {this.props.showUpdate ? (
-          <UpdateNoteForm note={this.props.noteSelected} />
-        ) : null}
+
         {this.props.deletingNote ? (
           <img src={logo} className="App-logo" alt="logo" />
         ) : null}

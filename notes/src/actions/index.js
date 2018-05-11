@@ -101,16 +101,16 @@ export const toggleShowUpdate = () => {
 
 export const updateSingleNote = (note, id) => {
   return dispatch => {
-    axios.put(URL + "/" + id, note)
+    axios.put(URL + "/update/" + id, note)
       .then(response => {
         console.log(response)
         dispatch({
             type: UPDATE_TARGET,
             payload: response.data
           })
-          .catch(err => console.log(err.message))
-
-      })
+          
+        })
+        .catch(err => console.log(err.message))
   };
 };
 

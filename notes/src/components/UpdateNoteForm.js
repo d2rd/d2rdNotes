@@ -13,7 +13,9 @@ class UpdateNoteForm extends Component {
   };
 
   handleInputChange = event => {
-    this.setState({ [event.target.title]: event.target.value });
+    console.log(event)
+    this.setState({ [event.target.name]: event.target.value });
+    console.log(this.state);
   };
 
   handleAddNote = event => {
@@ -26,11 +28,11 @@ class UpdateNoteForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleAddNote}>
-        <input name='title' placeholder={this.props.note.title} onChange= { this.handleInputChange } value={this.state.title } />
+        <input className='Input' name='title' placeholder={this.props.note.title} onChange={this.handleInputChange} value={this.state.title} />
         {/* <input name='summary' placeholder={this.props.note.summary} onChange= { this.handleInputChange } value={this.state.summary } /> */}
-        <input name='body' placeholder={this.props.note.body} onChange= { this.handleInputChange } value={this.state.body }/>
-        <input name='priority' placeholder={this.props.note.priority} onChange= { this.handleInputChange } value={this.state.priority }/>
-        <button type='submit'>Save Changes</button>
+        <input className='Input'name='body' placeholder={this.props.note.body} onChange= {this.handleInputChange} value={this.state.body}/>
+        <input className="Input-priority" name='priority' placeholder={this.props.note.priority} onChange= { this.handleInputChange} value={this.state.priority}/>
+        <button className="btn-Input-save" type='submit'>Save Changes</button>
       </form>
     );
   };
