@@ -5,14 +5,14 @@ const port = 5500;
 const app = express();
 
 let notes = [
-  // {
-  //   id: 0,
-  //   title: 'Auto service',
-  //   priority: 2,
-  //   summary: '',  // ADD logic to copy first 146 characters to summary.  If content is > 146 characters copy to body.
-  //   body: 'Check prices for Service G at Autobahn motors, Mercedes-Benz Marin, MB Pleasanton',
-  //   urlAddress: ``
-  // },
+  {
+    id: 0,
+    title: 'Auto service',
+    priority: 2,
+    summary: '',  // ADD logic to copy first 146 characters to summary.  If content is > 146 characters copy to body.
+    body: 'Check prices for Service G at Autobahn motors, Mercedes-Benz Marin, MB Pleasanton',
+    urlAddress: ``
+  },
   {
     id: 1,
     title: 'Trickfish 4x8 bass Cabinet',
