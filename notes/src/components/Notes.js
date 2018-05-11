@@ -29,7 +29,7 @@ class Notes extends Component {
         <div className="PanelContainer">
           <div className="Nav-panel">
             <div>
-              <button className="btn-NavButton">View Your Notes</button>
+              <button className="btn-NavButton" onClick={() => this.props.getNotes}>View Your Notes</button>
             </div>
             <div>
               <button className="btn-NavButton">Search Notes</button>
@@ -45,7 +45,7 @@ class Notes extends Component {
                     <div className="Note-header" onClick={() => this.props.showSelectedNote(note)} key={note.id}>
                       <h4>{note.title}</h4>
                     <div className="Note-summary">
-                      {note.body.slice(0,100)+"..."}
+                      {note.body.slice(0,200)+"..."}
                     </div>  
                     {/* make function to create summary on rendering notes list */}
                 </div>  // shows note contents on click
