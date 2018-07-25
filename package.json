@@ -2,11 +2,13 @@
   "name": "server",
   "version": "0.0.1",
   "description": "LambdaSchool CSPT1 Front-End Project Week project.  Restart by D2rd",
-  "main": "index.js",
+  "main": "./src/index.js",
   "dependencies": {
     "body-parser": "^1.17.1",
     "cors": "^2.8.3",
-    "express": "^4.15.2"
+    "dotenv": "^6.0.0",
+    "express": "^4.15.2",
+    "mongoose": "^5.2.5"
   },
   "devDependencies": {},
   "scripts": {
