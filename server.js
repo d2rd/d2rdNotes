@@ -5,7 +5,7 @@ const port = 5500;
 const app = express();
 
 // REFACTOR  to remove 'Summary' field because it is created on the fly in 'Notes.js'
-let d2rdNotes = [
+let notes = [
   {
     id: 0,
     title: 'Auto service',
@@ -51,41 +51,41 @@ let d2rdNotes = [
   }
 ];
 
-let id = d2rdNotes.length;
+let id = notes.length;
 
 app.use(bodyParser.json());
 
 app.use(cors());
 
-app.get('/api/d2rdNotes/get', (req, res) => {
-  res.send(d2rdNotes);
+app.get('/api/notes/get', (req, res) => {
+  res.send(notes);
 });
 
-app.post('/api/d2rdNotes/create', (req, res) => {
+app.post('/api/notes/create', (req, res) => {
   ++id;
   const { title, summary, body, priority } = req.body;
   const myNote = { id, title, summary, body, priority };
-  d2rdNotes.push(myNote);
-  res.send(d2rdNotes);
+  notes.push(myNote);
+  res.send(notes);
 });
 
-app.put('/api/d2rdNotes/update/:id', (req, res) => {
+app.put('/api/notes/update/:id', (req, res) => {
   const { title, priority,summary, body } = req.body;
   const updatedNote = { title, priority, summary, body };
-  const newNotes = d2rdNotes.map(note => {
+  const newNotes = notes.map(note => {
     return (note.id == req.params.id ? updatedNote :note);
   });
-  d2rdNotes = newNotes;
-  res.send(d2rdNotes);
+  notes = newNotes;
+  res.send(notes);
 });
 
-app.delete('/api/d2rdNotes/delete', (req, res) => {
+app.delete('/api/notes/delete', (req, res) => {
   const id = req.body.id;
-  const newNotes = d2rdNotes.filter(note => {
+  const newNotes = notes.filter(note => {
     return id !== note.id;
   });
-  d2rdNotes = newNotes;
-  res.send(d2rdNotes);
+  notes = newNotes;
+  res.send(notes);
 });
 
 app.listen(port, () => {
