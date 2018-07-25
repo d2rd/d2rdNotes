@@ -23,7 +23,7 @@ class App extends Component {
           {this.props.gettingNotes ? (
             <img src={logo} className="App-logo" alt="logo" />
           ) : (
-            <Notes notes={this.props.notes} />
+            <Notes d2rdNotes={this.props.d2rdNotes} />
           )}
         </div>
       </div>
@@ -34,11 +34,10 @@ class App extends Component {
 const mapStateToProps = state => {
   const { notesReducer } = state;
   return {
-    notes: notesReducer.notes,
+    d2rdNotes: notesReducer.d2rdNotes,
     error: notesReducer.error,
     gettingNotes: notesReducer.gettingNotes
   };
 };
 
 export default connect(mapStateToProps, { getNotes })(App);
-
