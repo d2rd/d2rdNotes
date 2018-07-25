@@ -40,14 +40,14 @@ class Notes extends Component {
           </div>
           <div className="Notes-panel">
               <ul className="Note-row">
-                {!this.props.noteSelected.id &&  this.props.notes.map(note => {
+                {!this.props.noteSelected.id &&  this.props.d2rdNotes.map(note => {
                   return (
                     <div className="Note-header" onClick={() => this.props.showSelectedNote(note)} key={note.id}>
                       <h4>{note.title}</h4>
                     <div className="Note-summary">
                       {note.body.slice(0,200)+"..."}
                     </div>  
-                    {/* make function to create summary on rendering notes list */}
+                    {/* make function to create summary on rendering d2rdNotes list */}
                 </div>  // shows note contents on click
                   );
                 })}
@@ -106,12 +106,12 @@ export default connect(mapStateToProps, {
 //     <div>
 //       <ul>
 //         {/* <li>
-//           {this.props.notes.map( notes => {
-//                   return <div>{ notes }</div>
+//           {this.props.d2rdNotes.map( d2rdNotes => {
+//                   return <div>{ d2rdNotes }</div>
 //                 })}
 //         </li> */}
 //         <li className="Note-row">
-//           {this.props.notes.map((note, i) => {
+//           {this.props.d2rdNotes.map((note, i) => {
 //             return (
 //               <div key = {i}>
 //                 <header className="Note-header">

@@ -13,15 +13,15 @@ export const SINGLE_NOTE = 'SINGLE_NOTE';
 export const TOGGLE_UPDATE_NOTE = 'TOGGLE_UPDATE_NOTE';
 export const UPDATE_TARGET = 'UPDATE_TARGET';
 
-const URL = 'http://localhost:5500/api/notes';
+const URL = 'http://localhost:5500/api/d2rdNotes';
 
 export const getNotes = () => {
-  const notes = axios.get(`${URL}/get`);
+  const d2rdNotes = axios.get(`${URL}/get`);
   return dispatch => {
     dispatch({
       type: GETTING_NOTES
     });
-    notes
+    d2rdNotes
       .then(response => {
         dispatch({
           type: GET_NOTES,

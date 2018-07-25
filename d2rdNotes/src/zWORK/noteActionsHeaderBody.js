@@ -1,6 +1,6 @@
 const FETCH_NOTES = 'FETCH_NOTES';
 
-const notes = [
+const d2rdNotes = [
   {
     title: '',
     body: '',
@@ -10,7 +10,7 @@ const notes = [
 const fetchNotes = () => {
   return {
     type: FETCH_NOTES,
-    payload: notes
+    payload: d2rdNotes
   }
 }
 
