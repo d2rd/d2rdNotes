@@ -21,13 +21,13 @@ let note5 = {
   title: 'Note 5',
   body: 'This the text for note5'
 }
-const notes = [note1, note2, note3, note4, note5];
+const d2rdNotes = [note1, note2, note3, note4, note5];
 
 //action creator is 9-15
 const fetchNotes = () => {
   return {  //action object
     type: FETCH_NOTES,
-    payload: notes
+    payload: d2rdNotes
   }
 }
 

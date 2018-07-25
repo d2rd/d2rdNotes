@@ -19,9 +19,9 @@ Use React-Router to show notesList or createNewNote
           <navPanel /> // nav
           <div className="Content__container"> //
             <Route exact path="/" render={this.Content} /> // list view
-            <Route path="/note/:id" render={this.Note} /> // individual notes
-            <Route path="/create/" render={this.Create} /> // add notes
-            <Route path="/edit/:id/" render={this.Edit} /> // edit notes
+            <Route path="/note/:id" render={this.Note} /> // individual d2rdNotes
+            <Route path="/create/" render={this.Create} /> // add d2rdNotes
+            <Route path="/edit/:id/" render={this.Edit} /> // edit d2rdNotes
           </div>
         </div>
       </BrowserRouter>

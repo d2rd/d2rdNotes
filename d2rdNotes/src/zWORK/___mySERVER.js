@@ -4,7 +4,7 @@ const cors = require('cors');
 const port = 5000;
 const app = express();
 
-let notes = [
+let d2rdNotes = [
   {
     id: 0,
     title: 'Auto service',
@@ -37,41 +37,41 @@ let notes = [
   }
 ];
 
-let id = notes.length;
+let id = d2rdNotes.length;
 
 app.use(bodyParser.json());
 
 app.use(cors());
 
-app.get('/api/notes/get', (req, res) => {
-  res.send(notes);
+app.get('/api/d2rdNotes/get', (req, res) => {
+  res.send(d2rdNotes);
 });
 
-app.post('/api/notes/create', (req, res) => {
+app.post('/api/d2rdNotes/create', (req, res) => {
   ++id;
   const { title, body, rank } = req.body;
   const myNote = { id, title, body, rank };
-  notes.push(myNote);
-  res.send(notes);
+  d2rdNotes.push(myNote);
+  res.send(d2rdNotes);
 });
 
-app.put('/api/notes/update', (req, res) => {
+app.put('/api/d2rdNotes/update', (req, res) => {
   const { title, rank, body } = req.body;
   const updatedNote = { title, rank, body };
-  const newNotes = notes.map(note => {
+  const newNotes = d2rdNotes.map(note => {
     return (note = updatedNote);
   });
-  notes = newNotes;
-  res.send(notes);
+  d2rdNotes = newNotes;
+  res.send(d2rdNotes);
 });
 
-app.delete('/api/notes/delete', (req, res) => {
+app.delete('/api/d2rdNotes/delete', (req, res) => {
   const id = req.body.id;
-  const newNotes = notes.filter(note => {
+  const newNotes = d2rdNotes.filter(note => {
     return id !== note.id;
   });
-  notes = newNotes;
-  res.send(notes);
+  d2rdNotes = newNotes;
+  res.send(d2rdNotes);
 });
 
 app.listen(port, () => {

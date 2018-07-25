@@ -20,7 +20,7 @@ Trello Set Up:
  Share your board with the project manager that has been assigned to you. If you have not been assigned yet, reach out to your lead TA for guidance
  Add your Trello URL to your project's README.md file. Commit the change, push it to your repository & submit a pull request
 MVP Features:
- Display a list of notes
+ Display a list of d2rdNotes
  Create a note with a title and content
  View an existing note
  Edit an existing note
@@ -37,7 +37,7 @@ Upon your first commit, please submit a Pull Request and add both the Trello Set
 * [ ] Add your Trello URL to your project's README.md file.  Commit the change, push it to your repository & submit a pull request
 
 ## MVP Features:
-* [ ] Display a list of notes
+* [ ] Display a list of d2rdNotes
 * [ ] Create a note with a title and content
 * [ ] View an existing note
 * [ ] Edit an existing note
@@ -48,11 +48,11 @@ Once your MVP has been approved, you have been given a feature list that the cli
 Extra Features:
  Make the data persist with arrays / object literals (JSON) or a 3rd party service like Firebase
  Search functionality
- Markdown support in notes
+ Markdown support in d2rdNotes
  Sorting options in the list view
- Create and display tags that can be added to notes
+ Create and display tags that can be added to d2rdNotes
  Drag sorting in the list view
  Add the ability to have checklists within the note view
- Export all notes to a CSV
+ Export all d2rdNotes to a CSV
  Create a login system around the MVP
 You will notice that this repository does not have any starter code. This is on purpose. You are to start from scratch using any files you have built throughout your time here at Lambda School.
