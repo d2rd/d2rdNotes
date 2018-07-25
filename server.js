@@ -4,6 +4,7 @@ const cors = require('cors');
 const port = 5500;
 const app = express();
 
+// REFACTOR  to remove 'Summary' field because it is created on the fly in 'Notes.js'
 let notes = [
   {
     id: 0,

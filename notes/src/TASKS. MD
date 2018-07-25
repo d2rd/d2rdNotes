@@ -1,3 +1,5 @@
+# REFACTOR  to remove 'Summary' field because it is created on the fly in 'Notes.js'
+
 # CREATE summary
 *   makeNoteSummary4 = note => {
     return note.summary = this.props.body.substring(0, 50);

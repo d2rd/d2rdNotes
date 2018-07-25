@@ -63,16 +63,12 @@ body {
 }
 .Nav-Panel, .Notes-Panel {
   /* display: inline-flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  */
-
+  justify-content: flex-start; */
   align-items: space-between;
   padding: 10pt;
 /* FIBONACCI SETTINGS */
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
   justify-content: flex-start;
 
   /*   align-content: stretch;
@@ -80,8 +76,12 @@ body {
 }
 
 .Nav-panel {
-  width: 15%;
-  min-width: 10%;
+  position: fixed;
+  top: 40;
+  left: 0;
+  width: 12%;
+  height: 100%;
+  min-width: 150px;
   max-width: 150px;
   /* margin-left: 0px; */
   padding: 2pt;
@@ -95,11 +95,14 @@ body {
 
 .Notes-panel {
   /* FFC */
-  min-width: 70%  ;
+  /* flex-wrap: nowrap; */
+  top: 40;
+  left: 3;
+  min-width: 80%  ;
   max-width: 90%;
-  height: 90%;
+  height: 100%;
   padding: 5pt;
-  /* margin-left: 1%; */
+  margin-left: 8%;
   /* TURN OFF BEFORE BUILD */
   /* border-style: solid; */
   border-width: 2px;
@@ -107,7 +110,7 @@ body {
   
   /* DD */
   display: "inline-block";
-  background: lightgrey;
+  /* background: lightgrey; */
 
 }
 
@@ -157,9 +160,9 @@ body {
 .Note-summary {
   background-color: rgb(70, 175, 207);
   height: 100px;
-  width: 350px;
+  width: 348px;
   /* margin: 10px 0px 5px; */
-  margin: 2px 2px 2px;
+  margin: 0px 0px 0px;
   /* padding: 10px 10px 10px 10px; */
   padding: 5px 2px;
   font-family: sans-serif;
@@ -294,7 +297,7 @@ body {
   display: inline-flex;
   flex-direction: column;
   align-items: space-between;
-  width: 5%;
+  width: 6%;
   padding: 10px;
   box-sizing: border-box;
   font-size: 12pt;
@@ -304,7 +307,7 @@ body {
 }
 
 .btn-Input-save, .btn-Input-saveUpdate {
-  width: 10%;
+  width: 150px;
   padding: 10px;
   box-sizing: border-box;
   font-size: 12pt;
