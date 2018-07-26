@@ -12,4 +12,4 @@ const NoteItem = mongoose.Schema({
     ref: 'ElectricUprights'}
 })
 
-module.exports = mongoose.model('Character', Character)
+module.exports = mongoose.model('NoteItem', NoteItem)
