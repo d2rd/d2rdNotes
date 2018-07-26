@@ -13,10 +13,12 @@ export const SINGLE_NOTE = 'SINGLE_NOTE';
 export const TOGGLE_UPDATE_NOTE = 'TOGGLE_UPDATE_NOTE';
 export const UPDATE_TARGET = 'UPDATE_TARGET';
 
-const URL = 'http://localhost:5500/api/d2rdNotes';
+const URL = 'http://localhost:5000';
+// to deploy to heroku replace `URL` with `herokuDeployURL`
+const herokuDeployURL = 'https://d2rd-notes-heroku.herokuapp.com'
 
 export const getNotes = () => {
-  const d2rdNotes = axios.get(`${URL}/get`);
+  const d2rdNotes = axios.get(`${URL}/ElectricUprights`);
   return dispatch => {
     dispatch({
       type: GETTING_NOTES
