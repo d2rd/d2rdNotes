@@ -53,32 +53,32 @@ app.get('./d2rdNotes/get', (req, res) => {
   res.send(d2rdNotes);
 });
 
-// app.post('/api/d2rdNotes/create', (req, res) => {
-//   ++id;
-//   const { title, summary, body, priority } = req.body;
-//   const myNote = { id, title, summary, body, priority };
-//   d2rdNotes.push(myNote);
-//   res.send(d2rdNotes);
-// });
+app.post('/api/d2rdNotes/create', (req, res) => {
+  ++id;
+  const { title, summary, body, priority } = req.body;
+  const myNote = { id, title, summary, body, priority };
+  d2rdNotes.push(myNote);
+  res.send(d2rdNotes);
+});
 
-// app.put('/api/d2rdNotes/update/:id', (req, res) => {
-//   const { title, priority, summary, body } = req.body;
-//   const updatedNote = { title, priority, summary, body };
-//   const newNotes = d2rdNotes.map(note => {
-//     return (note.id === req.params.id ? updatedNote :note);
-//   });
-//   d2rdNotes = newNotes;
-//   res.send(d2rdNotes);
-// });
+app.put('/api/d2rdNotes/update/:id', (req, res) => {
+  const { title, priority, summary, body } = req.body;
+  const updatedNote = { title, priority, summary, body };
+  const newNotes = d2rdNotes.map(note => {
+    return (note.id === req.params.id ? updatedNote :note);
+  });
+  d2rdNotes = newNotes;
+  res.send(d2rdNotes);
+});
 
-// app.delete('/api/d2rdNotes/delete', (req, res) => {
-//   const id = req.body.id;
-//   const newNotes = d2rdNotes.filter(note => {
-//     return id !== note.id;
-//   });
-//   d2rdNotes = newNotes;
-//   res.send(d2rdNotes);
-// });
+app.delete('/api/d2rdNotes/delete', (req, res) => {
+  const id = req.body.id;
+  const newNotes = d2rdNotes.filter(note => {
+    return id !== note.id;
+  });
+  d2rdNotes = newNotes;
+  res.send(d2rdNotes);
+});
 
 app.listen(PORT, () => {
   console.log(`server listening on port ${PORT}`);
